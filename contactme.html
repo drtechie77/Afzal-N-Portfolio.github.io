@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -16,13 +17,15 @@
 
     <header class="header">
         <a href="#" class="logo">{Portfolio} </a>
-
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Font Awesome bars icon -->
+        </div>
         <nav class="navbar">
             <a href="index.html" style="--i:1;" class="active">Home</a>
-           
-            <a href="#skill" style="--i:3;">Skills</a>
-            <a href="#project" style="--i:4;">Projects</a> 
             <a href="about.html" style="--i:2;">About</a>
+            <a href="#skill" style="--i:3;">Skills</a>
+            <a href="#project" style="--i:4;">Projects</a>
+            <a href="contact" style="--i:5;">Contact</a>
         </nav>
     </header>
 
@@ -60,6 +63,7 @@
         <!-- Add more social media icons as needed -->
     </div>
 </div>
+
 <style>
 body {
     margin: auto;
@@ -141,6 +145,26 @@ body::before {
         width: 90%;
         margin: 20px auto;margin-top: 100px; /* Added spacing from the header */
     }
+
+    .header .navbar {
+        display: none; /* Hide the navbar in mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu toggle button */
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .menu-toggle.active {
+        color: #00ff00; /* Green */
+    }
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* Header */
@@ -171,18 +195,45 @@ body::before {
 .header .navbar a.active {
     font-weight: bold;
 }
-canvas {
-    position: fixed;
-    top: auto;
-    left: auto;
-    background-color: black;
-    z-index: -1;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-size: 100px;
-    scroll-behavior: smooth;
+/* For mobile */
+@media screen and (max-width: 768px) {
+    .header .navbar {
+        display: none; /* Hide the navbar in mobile */
+    }
+}
+/* For mobile */
+.menu-toggle {
+    display: none; /* Hide the menu toggle button by default */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the menu toggle button on mobile */
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .menu-toggle.active {
+        color: #00ff00; /* Green */
+    }
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 </style>
+
+<script>
+$(document).ready(function(){
+    $('.menu-toggle').click(function(){
+        $(this).toggleClass('active');
+        $('.navbar').toggleClass('active');
+    });
+});
+</script>
+
 </body>
 </html>
