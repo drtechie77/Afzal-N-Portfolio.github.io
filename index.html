@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Afzal</title>
+    <title>Portfolio Home| Afzal</title>
 
     <link rel="icon" type="png|image" href="sailogo.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -18,24 +22,29 @@
                                                         <!-- Matrix -->
     <script src="matrix.js"></script>
 
+   
+
     <header class="header">
         <a href="#" class="logo">{Portfolio} </a>
-
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Font Awesome bars icon -->
+        </div>
         <nav class="navbar">
-            <!-- <a href="#home" style="--i:1;" class="active">Home</a> -->
+            <!-- <a href="index.html" style="--i:1;" class="active">Home</a> -->
             <a href="about.html" style="--i:2;">About</a>
-            <a href="#skill" style="--i:3;">Skills</a>
+            <a href="skills.html" style="--i:3;">Skills</a>
             <a href="#project" style="--i:4;">Projects</a>
             <a href="contactme.html" style="--i:5;">Contact</a>
         </nav>
     </header>
-
     <section id="home" class="home">
 
-        <div class="home-content" data-scroll data-scroll-speed="-5" >
-            <h3 class="mu">Hello, It's me</h3>
-            <h1>AFZAL - N</h1>
-            <h3>And I'm a <span class="pro-text">
+        <div class="home-content" data-scroll data-scroll-speed="-4" style="padding-top: 100px;" >
+            <h1 class="mu">Hello,</h1> <h3> It's me</h3>
+            <h1>AFZAL - N</h1><h3>And I'm a</h3>
+            
+                <h3> <span 
+                class="pro-text">
                 <script>
                    var typed = new Typed(".pro-text", {
                       strings: [
@@ -44,7 +53,7 @@
                         "Programmer",
                         "Linux Administrator",
                         "Web Developer",
-                        "Blockchain Developer"
+                        "BuG HunTer"
                       ],
                       typeSpeed: 100,   
                       backSpeed: 100,   
@@ -54,17 +63,13 @@
                 </script>
             </span></h3>
             
-            <p>  &emsp; &emsp;This portfolio highlights my passion for cybersecurity and my commitment to ethical practices. <br> <br>
-                &emsp; &emsp;I have acquired fundamental knowledge and skills in various areas of ethical hacking, 
-                allowing me to contribute to the security of organizations and individuals. <br> <br>
-                &emsp; &emsp;Hacked multiple Wifi network that were based on WPS protocol.  
-            </p>
-
+            
             <div class="home-sci">
                 <a href="https://github.com/" target="_blank"><i class='bx bxl-github'></i></a>
                 <a href="https://www.linkedin.com/in/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
                 <a href="https://wa.me/" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                
             </div>
            <a href="" class="btn-box" download="Afzal N/Resume">Download CV</a>
         </div>
@@ -80,6 +85,135 @@
         </div>
 
     </section>
+    <style>
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 100%;
+            margin: 20px auto;margin-top: 100px; /* Added spacing from the header */
+        }
+        
+        .home-img {
+                /* position:relative; */
+                max-width: 45%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains aspect ratio */
+  opacity: 0.7; /* Adjust opacity as needed */
+  position: absolute;
+  top: 90px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+           
+            }
+            .home-content {
+    width: 700px;
+    margin-top: 5px;
+    margin-bottom: 65px;
+    margin-right: 30px;
+}
+.home-content h1 {
+    font-size:25px;
+    font-weight: 800;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+}   
 
+.home-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+    
+        .header .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+        .menu-toggle {
+            display: block; /* Show the menu toggle button */
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+        }
+    
+        .menu-toggle.active {
+            color: #00ff00; /* Green */
+        }
+    
+        .header .navbar.active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    /* Header */
+    .header {
+        background-color: #222;
+        padding: 20px;
+    }
+    
+    .header .logo {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+    
+    .header .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .header .navbar a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    
+    .header .navbar a.active {
+        font-weight: bold;
+    }
+    /* For mobile */
+    @media screen and (max-width: 768px) {
+        .header .navbar {
+            display: none; /* Hide the navbar in mobile */
+        }
+    }
+    /* For mobile */
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button by default */
+    }
+    
+    @media screen and (max-width: 768px) {
+        .menu-toggle {
+            display: block; /* Show the menu toggle button on mobile */
+            cursor: pointer;
+            color: #fff;
+            font-size: 15px;
+        }
+    
+        .menu-toggle.active {
+            color: #00ff00; /* Green */
+        }
+    
+        .header .navbar.active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    </style>
+    
+        
+    <script>
+    $(document).ready(function(){
+        $('.menu-toggle').click(function(){
+            $(this).toggleClass('active');
+            $('.navbar').toggleClass('active');
+        });
+    });
+    </script>
 </body> 
 </html> 
