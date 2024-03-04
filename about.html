@@ -38,14 +38,14 @@
     <div class="container">
         <!-- Top Content -->
         <div class="top-content">
-            <h1>My Abouts</h1>
+            <h1>Welcome to our Question Form</h1>
             <p style="background-color: rgb(red, rgb(23, 235, 23), rgb(16, 16, 150));color: rgb(233, 84, 84);">
                 &emsp; &emsp;This portfolio highlights my passion for cybersecurity and my commitment to ethical practices. <br> <br>
                 &emsp; &emsp;I have acquired fundamental knowledge and skills in various areas of ethical hacking, 
                 allowing me to contribute to the security of organizations and individuals. <br> <br>
                 &emsp; &emsp;Hacked multiple Wifi network that were based on WPS protocol.  
             </p>
-            <p>Updating My Knowledge.</p>
+            <p>Please feel free to ask any questions you may have.</p>
         </div>
 
         <!-- TryHackMe Badge -->
@@ -204,9 +204,7 @@
                 display: none; /* Hide the navbar in mobile */
             } */
 
-            .menu-toggle {
-                display: block; /* Show the menu toggle button */
-            }
+          
         
 
         /* Logo container styling */
@@ -218,7 +216,14 @@
           
         .logo-container img {
             margin-right: 10px; /* Adjust margin as needed */
-        }
+        }@media screen and (max-width: 768px) {
+  
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
     </style>
 
     <!-- Custom JavaScript -->
@@ -235,4 +240,3 @@
     </script>
 </body>
 </html>
-
